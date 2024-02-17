@@ -17,9 +17,9 @@ return require('packer').startup(function(use)
 
 	use { 'projekt0n/github-nvim-theme' }
 
-use { "ellisonleao/gruvbox.nvim" }
-
-use "bluz71/vim-nightfly-colors"
+--this is the theme
+use("vim-airline/vim-airline")
+use('morhetz/gruvbox')
 
 --this is for nerdtree
 use {'preservim/nerdtree'}
@@ -28,9 +28,6 @@ use {'preservim/nerdtree'}
 
 use {'ryanoasis/vim-devicons'}
 
---this is for vim-airline
-use {'vim-airline/vim-airline'}
-use{'vim-airline/vim-airline-themes'}
 
 --for treesitter
 
@@ -69,4 +66,9 @@ use('nvim-telescope/telescope-ui-select.nvim')
 use{'L3MON4D3/LuaSnip'}
 use{'saadparwaiz1/cmp_luasnip'}
 use{'rafamadriz/friendly-snippets'}
+
+--for indent lines
+use{'lukas-reineke/indent-blankline.nvim'}
+--for tagbar
+use{'preservim/tagbar'}
 end)
