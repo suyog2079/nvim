@@ -1,5 +1,5 @@
 require("nvimConfig.remap")
-vim.cmd('colorscheme gruvbox')
+vim.cmd('colorscheme github_dark_high_contrast')
 vim.cmd('set mouse=a')
 vim.cmd('set number')
 vim.cmd('set relativenumber')

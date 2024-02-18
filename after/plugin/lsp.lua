@@ -11,7 +11,7 @@ lspconfig.lua_ls.setup({settings = {
 		diagnostics = {
 			globals = { 'vim' }
 		}
-	}}})
+	}}},{capabilities = capabilities,})
 
 	lspconfig.clangd.setup({capabilities = capabilities,})
 	lspconfig.html.setup({capabilities = capabilities,})
