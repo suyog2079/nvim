@@ -40,10 +40,6 @@ use('mbbill/undotree')
 --for git apparently
 use('tpope/vim-fugitive')
 
-
-use('BurntSushi/ripgrep')
---this apparently is for lsp
-
 use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",

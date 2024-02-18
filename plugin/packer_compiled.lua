@@ -174,11 +174,6 @@ _G.packer_plugins = {
     path = "/home/suyog/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ripgrep = {
-    loaded = true,
-    path = "/home/suyog/.local/share/nvim/site/pack/packer/start/ripgrep",
-    url = "https://github.com/BurntSushi/ripgrep"
-  },
   tagbar = {
     loaded = true,
     path = "/home/suyog/.local/share/nvim/site/pack/packer/start/tagbar",
