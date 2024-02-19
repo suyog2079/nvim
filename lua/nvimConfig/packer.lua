@@ -46,6 +46,7 @@ use {
     "neovim/nvim-lspconfig",
 }
 
+
 use{'hrsh7th/cmp-nvim-lsp'}
 use{'hrsh7th/cmp-buffer'}
 use{'hrsh7th/cmp-path'}
@@ -67,4 +68,8 @@ use{'rafamadriz/friendly-snippets'}
 use{'lukas-reineke/indent-blankline.nvim'}
 --for tagbar
 use{'preservim/tagbar'}
+
+--for latex<
+
+use('lervag/vimtex')
 end)
