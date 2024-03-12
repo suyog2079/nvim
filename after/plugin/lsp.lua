@@ -1,6 +1,6 @@
 require('mason').setup()
 require('mason-lspconfig').setup({
-	ensure_installed={"lua_ls","clangd",'tsserver','pyright','html'}
+	ensure_installed={"lua_ls","clangd",'tsserver','pyright','html',"rust_analyzer"}
 })
 
 local lspconfig = require('lspconfig')
@@ -14,6 +14,7 @@ lspconfig.lua_ls.setup({settings = {
 	}}},{capabilities = capabilities,})
 
 	lspconfig.clangd.setup({capabilities = capabilities,})
+	lspconfig.rust_analyzer.setup({capabilities = capabilities,})
 	lspconfig.html.setup({capabilities = capabilities,})
 	lspconfig.tsserver.setup({capabilities = capabilities,})
 	lspconfig.pyright.setup({capabilities = capabilities,})
