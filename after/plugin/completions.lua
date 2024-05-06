@@ -1,5 +1,6 @@
 local cmp = require('cmp')
 require('luasnip.loaders.from_vscode').lazy_load()
+require('luasnip.loaders.from_lua').lazy_load({paths = '/home/suyog/.config/nvim/snippets'})
 cmp.setup({
 	mapping = cmp.mapping.preset.insert({
 		['<C-b>'] = cmp.mapping.scroll_docs(-4),
