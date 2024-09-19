@@ -20,19 +20,18 @@ return require('packer').startup(function(use)
 --this is the theme
 use("vim-airline/vim-airline")
 use('morhetz/gruvbox')
+use('catppuccin/catppuccin')
 
 --this is for nerdtree
 use {'preservim/nerdtree'}
 
 --this is for icons in nerd tree
-
 use {'ryanoasis/vim-devicons'}
 
-
 --for treesitter
-
 use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 use ('nvim-treesitter/playground')
+
 --for harpoon
 use('ThePrimeagen/harpoon')
 --for undo tree
@@ -71,6 +70,9 @@ use{'lukas-reineke/indent-blankline.nvim'}
 use{'preservim/tagbar'}
 
 --for latex<
-
 use('lervag/vimtex')
+
+--for bufferline
+use('akinsho/bufferline.nvim')
+
 end)
