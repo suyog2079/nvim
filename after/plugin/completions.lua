@@ -14,9 +14,9 @@ cmp.setup({
 			require('luasnip').lsp_expand(args.body)
 		end,},
 
-	sources = cmp.config.sources(
+		sources = cmp.config.sources(
 		{{name = 'nvim_lsp'},},
 		{{name = 'buffer'},},
 		{{name = 'luasnip'}}
-	)
+		)
 	})
