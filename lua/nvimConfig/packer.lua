@@ -72,8 +72,26 @@ return require('packer').startup(function(use)
 	--for latex<
 	use('lervag/vimtex')
 
+	-- for comment
+	use {
+		'numToStr/Comment.nvim',
+		config = function()
+			require('Comment').setup()
+		end
+	}
+
 	--for toggleterm
 	use {"akinsho/toggleterm.nvim", tag = '*', config = function()
 		require("toggleterm").setup()
 	end}
+
+	-- to generate function descriptions
+	use {
+		"danymat/neogen",
+		config = function()
+			require('neogen').setup {}
+		end,
+		-- Uncomment next line if you want to follow only stable versions
+		-- tag = "*"
+	}
 end)

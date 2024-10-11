@@ -5,3 +5,26 @@ vim.keymap.set("n","<leader>u",vim.cmd.UndotreeToggle)
 vim.keymap.set('n','<leader>tbar',vim.cmd.TagbarToggle)
 vim.keymap.set('t','<Esc>','<C-\\><C-n>')
 vim.keymap.set('n','<leader>tt',vim.cmd.ToggleTerm)
+vim.keymap.set('n','gn',vim.cmd.bn)
+vim.keymap.set('n','gp',vim.cmd.bp)
+
+local api = require('Comment.api')
+
+-- these are for comments
+vim.keymap.set('n', '<C-_>', api.toggle.linewise.current)
+
+-- toggle n lines with ctrl-/ n j
+vim.keymap.set(
+'n', '<leader>c', api.call('toggle.linewise', 'g@'),
+{ expr = true }
+)
+
+local esc = vim.api.nvim_replace_termcodes(
+'<ESC>', true, false, true
+)
+
+-- Toggle selection (linewise)
+vim.keymap.set('x', '<C-_>', function()
+	vim.api.nvim_feedkeys(esc, 'nx', false)
+	api.toggle.linewise(vim.fn.visualmode())
+end)
