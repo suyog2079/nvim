@@ -21,6 +21,7 @@ return require('packer').startup(function(use)
 	use("vim-airline/vim-airline-themes")
 	use('morhetz/gruvbox')
 	use('catppuccin/nvim')
+	use('folke/tokyonight.nvim')
 
 	--this is for nerdtree
 	use {'preservim/nerdtree'}
@@ -94,4 +95,11 @@ return require('packer').startup(function(use)
 		-- Uncomment next line if you want to follow only stable versions
 		-- tag = "*"
 	}
+
+	-- for competitive programming
+	-- use {
+		-- 'xeluxee/competitest.nvim',
+	-- 	requires = 'MunifTanjim/nui.nvim',
+	-- 	config = function() require('competitest').setup() end
+	-- }
 end)

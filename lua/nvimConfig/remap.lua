@@ -5,8 +5,8 @@ vim.keymap.set("n","<leader>u",vim.cmd.UndotreeToggle)
 vim.keymap.set('n','<leader>tbar',vim.cmd.TagbarToggle)
 vim.keymap.set('t','<Esc>','<C-\\><C-n>')
 vim.keymap.set('n','<leader>tt',vim.cmd.ToggleTerm)
-vim.keymap.set('n','gn',vim.cmd.bn)
-vim.keymap.set('n','gp',vim.cmd.bp)
+vim.keymap.set('n','bn',vim.cmd.bn)
+vim.keymap.set('n','bp',vim.cmd.bp)
 
 local api = require('Comment.api')
 
