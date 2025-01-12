@@ -33,12 +33,8 @@ return require('packer').startup(function(use)
 	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use ('nvim-treesitter/playground')
 
-	--for harpoon
-	use('ThePrimeagen/harpoon')
 	--for undo tree
 	use('mbbill/undotree')
-	--for git apparently
-	use('tpope/vim-fugitive')
 
 	-- for lsps
 	use {
@@ -54,19 +50,20 @@ return require('packer').startup(function(use)
 	use{'hrsh7th/cmp-cmdline'}
 	use{'hrsh7th/nvim-cmp'}
 
-
-	--for telescope ui again(this time it gives nice little window for code actions)
-
-	use('nvim-telescope/telescope-ui-select.nvim')
-
 	--for code snippets
 
 	use{'L3MON4D3/LuaSnip'}
 	use{'saadparwaiz1/cmp_luasnip'}
 	use{'rafamadriz/friendly-snippets'}
 
+	--for telescope ui again(this time it gives nice little window for code actions)
+
+	use('nvim-telescope/telescope-ui-select.nvim')
+
+
 	--for indent lines
 	use{'lukas-reineke/indent-blankline.nvim'}
+
 	--for tagbar
 	use{'preservim/tagbar'}
 
@@ -80,6 +77,8 @@ return require('packer').startup(function(use)
 			require('Comment').setup()
 		end
 	}
+
+	use{"tpope/vim-fugitive"}
 
 	--for toggleterm
 	use {"akinsho/toggleterm.nvim", tag = '*', config = function()
@@ -96,10 +95,39 @@ return require('packer').startup(function(use)
 		-- tag = "*"
 	}
 
+	-- for inlay hints at the end of line
+	use {
+		"chrisgrieser/nvim-lsp-endhints",
+		config = function()
+			require("lsp-endhints").setup {
+	icons = {
+		type = "󰜁 ",
+		parameter = "󰏪 ",
+		offspec = " ", -- hint kind not defined in official LSP spec
+		unknown = " ", -- hint kind is nil
+	},
+	label = {
+		truncateAtChars = 20,
+		padding = 1,
+		marginLeft = 0,
+		sameKindSeparator = ", ",
+	},
+	autoEnableHints = true,
+}
+end}
+
+-- for markdown rendering
+use({
+    'MeanderingProgrammer/render-markdown.nvim',
+    after = { 'nvim-treesitter' },
+    config = function()
+        require('render-markdown').setup({})
+    end,
+})
 	-- for competitive programming
 	-- use {
 		-- 'xeluxee/competitest.nvim',
-	-- 	requires = 'MunifTanjim/nui.nvim',
-	-- 	config = function() require('competitest').setup() end
-	-- }
-end)
+		-- 	requires = 'MunifTanjim/nui.nvim',
+		-- 	config = function() require('competitest').setup() end
+		-- }
+	end)

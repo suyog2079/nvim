@@ -1,5 +1,6 @@
 require("nvimConfig.remap")
-vim.cmd('colorscheme gruvbox')
+require("ibl").setup()
+vim.cmd('colorscheme catppuccin')
 vim.cmd('set mouse=a')
 vim.cmd('set number')
 vim.cmd('set relativenumber')
