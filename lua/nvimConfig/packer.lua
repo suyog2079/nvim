@@ -23,8 +23,10 @@ return require('packer').startup(function(use)
 	use('catppuccin/nvim')
 	use('folke/tokyonight.nvim')
 
-	-- for gdb(vimspector)
-	use{'puremourning/vimspector'}
+	-- -- for gdb(vimspector)
+	-- use{'puremourning/vimspector'}
+	use{'rcarriga/nvim-dap-ui',requires = {'mfussenegger/nvim-dap'}}
+	use('theHamsta/nvim-dap-virtual-text')
 
 	--this is for nerdtree
 	use {'preservim/nerdtree'}
