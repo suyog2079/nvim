@@ -23,6 +23,9 @@ return require('packer').startup(function(use)
 	use('catppuccin/nvim')
 	use('folke/tokyonight.nvim')
 
+	-- for gdb(vimspector)
+	use{'puremourning/vimspector'}
+
 	--this is for nerdtree
 	use {'preservim/nerdtree'}
 
