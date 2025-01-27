@@ -14,6 +14,10 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
+	-- -- floating cmd line
+	-- use{'vonheikemen/fine-cmdline.nvim'}
+	-- use('MunifTanjim/nui.nvim')
+
 	--here are some themes i use
 
 	use { 'projekt0n/github-nvim-theme' }

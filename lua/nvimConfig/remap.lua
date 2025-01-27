@@ -8,24 +8,19 @@ vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 vim.keymap.set('n', '<leader>tt', vim.cmd.ToggleTerm)
 vim.keymap.set('n', 'bn', vim.cmd.bn)
 vim.keymap.set('n', 'bp', vim.cmd.bp)
+vim.opt.mouse = ""
 
 local api = require('Comment.api')
 
 -- these are for comments
-vim.keymap.set('v', '<C-_>', api.toggle.linewise.current)
-
--- toggle n lines with ctrl-/ n j
-vim.keymap.set(
-	'n', '<leader>c', api.call('toggle.linewise', 'g@'),
-	{ expr = true }
-)
+vim.keymap.set('n', '<C-_>', api.toggle.linewise.current)
 
 local esc = vim.api.nvim_replace_termcodes(
-	'<ESC>', true, false, true
+	'<esc>', true, false, true
 )
 
 -- Toggle selection (linewise)
-vim.keymap.set('x', '<C-_>', function()
-	vim.api.nvim_feedkeys(esc, 'nx', false)
+vim.keymap.set('v', '<C-_>', function()
+	vim.api.nvim_feedkeys(esc, 'x', false)
 	api.toggle.linewise(vim.fn.visualmode())
 end)
