@@ -1,6 +1,6 @@
 require('mason').setup()
 require('mason-lspconfig').setup({
-	ensure_installed={'lua_ls','clangd','ts_ls','pyright','html','rust_analyzer','ltex','cmake','markdown_oxide'}
+	ensure_installed={'lua_ls','dockerls','clangd','ts_ls','pyright','html','rust_analyzer','ltex','cmake','markdown_oxide'}
 })
 
 local lspconfig = require('lspconfig')
@@ -14,6 +14,7 @@ lspconfig.lua_ls.setup({settings = {
 	}}},{capabilities = capabilities,})
 
 	lspconfig.clangd.setup({capabilities = capabilities,})
+	lspconfig.dockerls.setup({capabilities = capabilities,})
 	lspconfig.cmake.setup({capabilities = capabilities,})
 	lspconfig.ltex.setup({capabilities = capabilities,})
 	lspconfig.rust_analyzer.setup({capabilities = capabilities,})
