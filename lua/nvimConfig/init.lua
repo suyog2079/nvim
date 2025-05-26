@@ -1,7 +1,7 @@
 
 require("nvimConfig.remap")
 require("ibl").setup()
-vim.cmd('colorscheme tokyonight')
+vim.cmd('colorscheme tokyonight-moon')
 vim.cmd('set mouse=a')
 vim.cmd('set number')
 vim.cmd('set relativenumber')

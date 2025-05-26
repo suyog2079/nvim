@@ -14,10 +14,6 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
-	-- -- floating cmd line
-	-- use{'vonheikemen/fine-cmdline.nvim'}
-	-- use('MunifTanjim/nui.nvim')
-
 	--here are some themes i use
 
 	use { 'projekt0n/github-nvim-theme' }
@@ -52,7 +48,6 @@ return require('packer').startup(function(use)
 		"neovim/nvim-lspconfig",
 	}
 
-
 	use{'hrsh7th/cmp-nvim-lsp'}
 	use{'hrsh7th/cmp-buffer'}
 	use{'hrsh7th/cmp-path'}
@@ -65,10 +60,12 @@ return require('packer').startup(function(use)
 	use{'saadparwaiz1/cmp_luasnip'}
 	use{'rafamadriz/friendly-snippets'}
 
+	--- github copilot
+	use{'github/copilot.vim'}
+
 	--for telescope ui again(this time it gives nice little window for code actions)
 
 	use('nvim-telescope/telescope-ui-select.nvim')
-
 
 	--for indent lines
 	use{'lukas-reineke/indent-blankline.nvim'}
