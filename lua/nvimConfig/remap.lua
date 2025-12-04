@@ -13,14 +13,14 @@ vim.opt.mouse = ""
 local api = require('Comment.api')
 
 -- these are for comments
-vim.keymap.set('n', '<C-_>', api.toggle.linewise.current)
+vim.keymap.set('n', '<C-c>', api.toggle.linewise.current)
 
 local esc = vim.api.nvim_replace_termcodes(
 	'<esc>', true, false, true
 )
 
 -- Toggle selection (linewise)
-vim.keymap.set('v', '<C-_>', function()
+vim.keymap.set('v', '<C-c>', function()
 	vim.api.nvim_feedkeys(esc, 'x', false)
 	api.toggle.linewise(vim.fn.visualmode())
 end)
